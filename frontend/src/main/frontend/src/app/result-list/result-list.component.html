@@ -1,0 +1,9 @@
+<h2>Result List</h2>
+
+<div *ngFor="let r of results">
+ <b> {{r.category.name}}</b>
+  <div *ngFor="let p of r.results">
+    {{p.name}} - {{p.timeString}}
+  </div><br>
+
+</div>
