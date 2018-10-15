@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { ResultListComponent } from './result-list/result-list.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ResultCardComponent } from './result-card/result-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ResultListComponent
+    ResultListComponent,
+    ResultCardComponent
   ],
   imports: [
     BrowserModule,

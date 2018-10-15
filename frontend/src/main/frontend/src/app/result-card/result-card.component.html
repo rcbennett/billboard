@@ -1,0 +1,14 @@
+
+<div class="d-block w-100" style="width: 18rem;">
+  <div class="card" style="width: 18rem;">
+    <h5 class="card-title"> {{result.category.name}}</h5>
+    <div class="card-body">
+      <div class="container">
+<div class="row" *ngFor="let finisher of result.results">
+  <div class="col">{{finisher.name}}</div><div class="col">{{finisher.timeString}}</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>

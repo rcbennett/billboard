@@ -1,9 +1,11 @@
 <h2>Result List</h2>
-
-<div *ngFor="let r of results">
- <b> {{r.category.name}}</b>
-  <div *ngFor="let p of r.results">
-    {{p.name}} - {{p.timeString}}
-  </div><br>
-
+<div id="carouselOfResults" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <h5>Hello There</h5>
+    </div>
+<div class="carousel-item " *ngFor="let r of results">
+ <app-result-card [result]="r"></app-result-card>
+</div>
+</div>
 </div>
