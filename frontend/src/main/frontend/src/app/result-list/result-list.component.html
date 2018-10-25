@@ -1,11 +1,10 @@
 
 <div id="carouselOfResults" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <h5>Hello There</h5>
+
+    <div  *ngFor="let r of results; let f=first; let i = index" [ngClass]="(f)?'carousel-item active':'carousel-item'">
+     <app-result-card [result]="r"></app-result-card>
     </div>
-<div class="carousel-item " *ngFor="let r of results">
- <app-result-card [result]="r"></app-result-card>
-</div>
+
 </div>
 </div>

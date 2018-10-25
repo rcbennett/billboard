@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './result-card.component.html',
   styleUrls: ['./result-card.component.css']
 })
-export class ResultCardComponent implements OnInit {
+export class ResultCardComponent {
   @Input() result;
 
   constructor() { }

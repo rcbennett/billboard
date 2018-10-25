@@ -4,9 +4,14 @@
     <h5 class="card-title"> {{result.category.name}}</h5>
     <div class="card-body">
       <div class="container">
-<div class="row" *ngFor="let finisher of result.results">
-  <div class="col">{{finisher.name}}</div><div class="col">{{finisher.timeString}}</div>
+        Men
+<div class="row" *ngFor="let finisher of result.mensResults ; let f=first; let i = index">
+  <div class="col">{{i+1}} - {{finisher.name}}</div><div class="col">{{finisher.timeString}}</div>
 </div>
+        Women
+        <div class="row" *ngFor="let finisher of result.womensResults ; let f=first; let i = index">
+          <div class="col">{{i+1}} - {{finisher.name}}</div><div class="col">{{finisher.timeString}}</div>
+        </div>
 </div>
 </div>
 </div>
