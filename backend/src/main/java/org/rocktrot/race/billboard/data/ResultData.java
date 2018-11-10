@@ -12,4 +12,10 @@ public class ResultData {
     public List<CategoryResults> getAllResults() {
         return allResults;
     }
+
+    public void reset(){
+        for (CategoryResults result:allResults) {
+            result.reset();
+        }
+    }
 }

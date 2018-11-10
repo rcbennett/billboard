@@ -12,4 +12,6 @@ export class ResultsService {
   getAll(): Observable<any> {
       return this.http.get('/api/results');
    }
+
+
 }

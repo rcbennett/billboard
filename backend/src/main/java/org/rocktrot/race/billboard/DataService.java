@@ -4,6 +4,8 @@ import org.rocktrot.race.billboard.data.Category;
 import org.rocktrot.race.billboard.data.CategoryResults;
 import org.rocktrot.race.billboard.data.Result;
 import org.rocktrot.race.billboard.data.ResultData;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -13,8 +15,11 @@ import java.util.Map;
 public class DataService {
     public ResultData results;
     Map<Integer, CategoryResults> catAgeMap;
+    long latestTimestamp;
+    Logger log = LoggerFactory.getLogger(this.getClass().getName());
 
     public DataService() {
+        latestTimestamp = 0;
         results = new ResultData();
         catAgeMap = new HashMap<Integer, CategoryResults>();
         CategoryResults catRes;
@@ -62,7 +67,7 @@ public class DataService {
                 canAdd = true;
             }
             if(canAdd) {
-                System.out.println("Adding entry for [" + result.getName() + "]");
+                log.info("Adding entry for [" + result.getName() + "]");
                 resultList.add(result);
                 Collections.sort(resultList);
                 while (resultList.size() > 3) {
@@ -70,5 +75,10 @@ public class DataService {
                 }
             }
         }
+    }
+
+    public void reset() {
+        results.reset();
+        latestTimestamp = System.currentTimeMillis();
     }
 }

@@ -14,6 +14,11 @@ public class CategoryResults {
         womensResults = new LinkedList<Result>();
     }
 
+    public void reset(){
+        mensResults.clear();
+        womensResults.clear();
+    }
+
     public Category getCategory() {
         return category;
     }

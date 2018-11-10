@@ -41,9 +41,8 @@ public class Result implements Comparable<Result> {
 
 
         idx = timeString.lastIndexOf(":");
-        if(idx > 0) {
-            secStr = timeString.substring(idx+1);
-            hours = Integer.parseInt(secStr);
+        if(timeString.length() > 0) {
+            hours = Integer.parseInt(timeString);
         }
         totSecs = (this.hours * 60 * 60 ) + (this.mins * 60) + this.seconds;
 
