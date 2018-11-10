@@ -1,16 +1,12 @@
 
   .results {
-    margin-top:  100px;
+    margin-top:  60px;
    }
-
-
 
    .card {
     text-align: center;
     margin-top: 20px;
     background-color: transparent;
-
-
    }
 
    .card-title {
@@ -18,31 +14,31 @@
      font-size: 56px;
    }
 
-.category {
-  font-size: 48px;
-}
+  .category {
+    font-size: 48px;
+  }
   .card-body {
-  margin-top: 20px;
-  color: black;
-  opacity: 1;
+    margin-top: 20px;
+    color: black;
+    opacity: 1;
   }
 
-.details{
-  margin-top: 20px;
+  .gender {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    height: 280px;
+  }
 
-}
+  .detail-list {
+    margin-top:  36px;
+  }
 
-.gender {
-background: white;
-}
+  .detail-item {
+      text-align: left;
+      font-size: 24px;
+    }
 
-.detail-list {
-
-  margin-top:  36px;
-
-
-}
-.detail-item {
-    text-align: left;
-    font-size: 24px;
+  .time {
+    text-align: right;
   }
