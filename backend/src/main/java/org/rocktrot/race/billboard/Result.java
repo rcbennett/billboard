@@ -2,7 +2,7 @@ package org.rocktrot.race.billboard;
 
 import java.util.Objects;
 
-public class Result implements Comparable<Result>{
+public class Result implements Comparable<Result> {
     String name;
     String id;
     String timeString;
@@ -15,19 +15,6 @@ public class Result implements Comparable<Result>{
 
 
     public Result() {
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Result result = (Result) o;
-        return Objects.equals(id, result.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 
     public Result(String name, String id, int age, String gender, String timeString) {
@@ -140,5 +127,18 @@ public class Result implements Comparable<Result>{
     @Override
     public int compareTo(Result o) {
         return this.totSecs - o.totSecs;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Result result = (Result) o;
+        return Objects.equals(id, result.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

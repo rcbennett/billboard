@@ -1,0 +1,48 @@
+
+  .results {
+    margin-top:  100px;
+   }
+
+
+
+   .card {
+    text-align: center;
+    margin-top: 20px;
+    background-color: transparent;
+
+
+   }
+
+   .card-title {
+     color: white;
+     font-size: 56px;
+   }
+
+.category {
+  font-size: 48px;
+}
+  .card-body {
+  margin-top: 20px;
+  color: black;
+  opacity: 1;
+  }
+
+.details{
+  margin-top: 20px;
+
+}
+
+.gender {
+background: white;
+}
+
+.detail-list {
+
+  margin-top:  36px;
+
+
+}
+.detail-item {
+    text-align: left;
+    font-size: 24px;
+  }

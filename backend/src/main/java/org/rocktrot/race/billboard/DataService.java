@@ -23,22 +23,6 @@ public class DataService {
         configureCategory("60 - 69","6069",60,69);
         configureCategory("70 & over","70up",70,200);
 
-
-        //        catRes = new CategoryResults(new Category("40+","40"));
-//        catRes.mensResults.add(new Result("Jacob Vargish","e404","23:02",23,2));
-//        catRes.mensResults.add(new Result("Michael Kulish","e404","25:02",25,2));
-//        catRes.mensResults.add(new Result("Damon Edmund","e404","34:02",34,2));
-//        catRes.mensResults.add(new Result("Rob Bennett","e404","37:02",37,2));
-//
-//        catRes.womensResults.add(new Result("Tara Vargish","e404","23:02",23,2));
-//        catRes.womensResults.add(new Result("Nicky Kulish","e404","25:02",25,2));
-//        catRes.womensResults.add(new Result("Jenn Bennett","e404","34:02",34,2));
-//        catRes.womensResults.add(new Result("Lily Othersby","e404","37:02",37,2));
-//        results.allResults.add(catRes);
-
-
-
-
     }
 
     private void configureCategory(String catName, String catId, int minAge, int maxAge){
@@ -66,7 +50,7 @@ public class DataService {
             boolean canAdd = false;
             if(resultList.size() >=3){
                 Result other = resultList.get(resultList.size() - 1);
-                if(result.compareTo(other) > 0){
+                if(result.compareTo(other) < 0){
                     canAdd = true;
                 }
             } else {
@@ -82,8 +66,4 @@ public class DataService {
             }
         }
     }
-
-    // add method to insert a category
-
-    //add method to insert a result
 }

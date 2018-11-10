@@ -1,19 +1,52 @@
-
-<div class="d-block w-100" style="width: 40rem;">
-  <div class="card" style="width: 40rem;">
-    <h5 class="card-title"> {{result.category.name}}</h5>
+<div class="results-page">
+<div class="d-block w-100 results">
+  <div class="card">
+    <h1 class="card-title"> {{result.category.name}}</h1>
     <div class="card-body">
       <div class="container">
-        Men
-<div class="row" *ngFor="let finisher of result.mensResults ; let f=first; let i = index">
-  <div class="col">{{i+1}} - {{finisher.name}}</div><div class="col">{{finisher.timeString}}</div>
-</div>
-        Women
-        <div class="row" *ngFor="let finisher of result.womensResults ; let f=first; let i = index">
-          <div class="col">{{i+1}} - {{finisher.name}}</div><div class="col">{{finisher.timeString}}</div>
+        <div class="row details">
+          <div class="col-md-6 gender">
+            <h2 class="category">Men</h2>
+            <div class="detail-list">
+            <div class="row"
+                 *ngFor="let finisher of result.mensResults ; let f=first; let i = index">
+              <div class="col-md-8 detail-item">{{i+1}} - {{finisher.name}}</div>
+              <div class="col-md-4 detail-item">{{finisher.timeString}}</div>
+            </div>
+          </div>
+          </div>
+          <div class="col-md-6 gender">
+            <h2 class="category">Women</h2>
+            <div class="detail-list">
+            <div class="row"
+                 *ngFor="let finisher of result.womensResults ; let f=first; let i = index">
+              <div class="col-md-8 detail-item">{{i+1}} - {{finisher.name}}</div>
+              <div class="col-md-4 detail-item">{{finisher.timeString}}</div>
+            </div>
+          </div>
+            <div class="detail-list">
         </div>
-</div>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 
-</div>
+
+<!--<div class="d-block w-100" style="width: 40rem;opacity:.3;top 100px">-->
+<!--<div class="card" style="width: 90rem;text-align: center; border 3px ">-->
+<!--<h1 class="card-title"> {{result.category.name}}</h1>-->
+<!--<div class="card-body">-->
+<!--<div class="container">-->
+<!--<h2>Men</h2>-->
+<!--<div style="text-align: left;" class="row" *ngFor="let finisher of result.mensResults ; let f=first; let i = index">-->
+<!--<div class="col">{{i+1}} - {{finisher.name}}</div><div class="col">{{finisher.timeString}}</div>-->
+<!--</div>-->
+<!--<h2>Women</h2>-->
+<!--<div style="text-align: left;" class="row" *ngFor="let finisher of result.womensResults ; let f=first; let i = index">-->
+<!--<div class="col">{{i+1}} - {{finisher.name}}</div><div class="col">{{finisher.timeString}}</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
