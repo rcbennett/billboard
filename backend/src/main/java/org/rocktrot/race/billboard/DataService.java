@@ -1,5 +1,10 @@
 package org.rocktrot.race.billboard;
 
+import org.rocktrot.race.billboard.data.Category;
+import org.rocktrot.race.billboard.data.CategoryResults;
+import org.rocktrot.race.billboard.data.Result;
+import org.rocktrot.race.billboard.data.ResultData;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -7,7 +12,7 @@ import java.util.Map;
 
 public class DataService {
     public ResultData results;
-    Map<Integer,CategoryResults> catAgeMap;
+    Map<Integer, CategoryResults> catAgeMap;
 
     public DataService() {
         results = new ResultData();
@@ -29,7 +34,7 @@ public class DataService {
         CategoryResults catRes;
 
         catRes = new CategoryResults(new Category(catName,catId,minAge,maxAge));
-        results.allResults.add(catRes);
+        results.getAllResults().add(catRes);
         for(int i = minAge; i <= maxAge; i++){
             catAgeMap.put(i,catRes);
         }
@@ -39,9 +44,9 @@ public class DataService {
 
     public void addResult(Result result){
         // figure out the category
-        CategoryResults catRes = catAgeMap.get(result.age);
+        CategoryResults catRes = catAgeMap.get(result.getAge());
         List<Result> resultList;
-        if(result.gender.equalsIgnoreCase("M")){
+        if(result.getGender().equalsIgnoreCase("M")){
             resultList = catRes.mensResults;
         } else {
             resultList = catRes.womensResults;
@@ -57,7 +62,7 @@ public class DataService {
                 canAdd = true;
             }
             if(canAdd) {
-                System.out.println("Adding entry for [" + result.name + "]");
+                System.out.println("Adding entry for [" + result.getName() + "]");
                 resultList.add(result);
                 Collections.sort(resultList);
                 while (resultList.size() > 3) {

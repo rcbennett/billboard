@@ -1,4 +1,4 @@
-package org.rocktrot.race.billboard;
+package org.rocktrot.race.billboard.data;
 
 import java.util.*;
 

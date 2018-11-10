@@ -1,5 +1,7 @@
 package org.rocktrot.race.billboard;
 
+import org.rocktrot.race.billboard.data.CategoryResults;
+import org.rocktrot.race.billboard.data.Result;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +19,7 @@ public class ResultsService {
 
     @RequestMapping("/api/results")
     public List<CategoryResults> retrieveResults(){
-        return data.results.allResults;
+        return data.results.getAllResults();
     }
 
     @PostMapping("/api/result")
