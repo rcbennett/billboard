@@ -1,8 +1,8 @@
 package org.rocktrot.race.billboard;
 
 import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+import org.rocktrot.race.billboard.data.Result;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.*;
