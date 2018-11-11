@@ -1,42 +1,53 @@
 
   .results {
-    margin-top:  60px;
+    margin-top:  10px;
    }
 
    .card {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 2px;
     background-color: transparent;
    }
 
+  .container {
+    max-width: 100%;
+  }
+
    .card-title {
      color: white;
+     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
      font-size: 56px;
+     margin-bottom: 10px;
    }
 
   .category {
-    font-size: 48px;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 80px;
   }
   .card-body {
-    margin-top: 20px;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    margin-top: 0px;
+
     color: black;
     opacity: 1;
   }
 
   .gender {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     background: white;
     padding: 20px;
     border-radius: 20px;
-    height: 280px;
+    height: 400px;
+    max-width: 100%;
   }
 
   .detail-list {
-    margin-top:  36px;
+    margin-top:  2px;
   }
 
   .detail-item {
       text-align: left;
-      font-size: 24px;
+      font-size: 48px;
     }
 
   .time {

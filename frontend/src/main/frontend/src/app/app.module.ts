@@ -31,4 +31,4 @@ import { enableProdMode } from '@angular/core';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
- enableProdMode();
+

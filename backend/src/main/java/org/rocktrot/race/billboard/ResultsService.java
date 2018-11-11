@@ -49,16 +49,23 @@ public class ResultsService {
     }
 
     @PostMapping("/api/upload")
-    public String handleFileUpload(@RequestParam("file") MultipartFile file) {
-
-        log.info("Uploaded file");
-        storageService.store(file);
-        try {
-            dataImporter.importData(file, data);
-        } catch (IOException ioe){
-            log.error("Could not read uploaded file", ioe.getLocalizedMessage());
+    public String handleFileUpload(@RequestParam("key") String key, @RequestParam("file") MultipartFile file) {
+        String result;
+        log.info("Received uploaded file");
+        if(key!= null && key.equals("rockleaders")) {
+            storageService.store(file);
+            result = "complete";
+            try {
+                dataImporter.importData(file, data);
+            } catch (IOException ioe) {
+                log.error("Could not read uploaded file", ioe.getLocalizedMessage());
+                result = "error uploading";
+            }
+        } else {
+            log.error("invalid key!!");
+            result = "invalid key";
         }
 
-        return "redirect:/";
+        return result;
     }
 }

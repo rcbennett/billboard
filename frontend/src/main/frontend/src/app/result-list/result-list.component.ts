@@ -36,7 +36,7 @@ export class ResultListComponent implements OnInit, OnDestroy {
   }
 
   refreshData() {
-
+    console.log('calling results');
     this.resultsService.getAll().subscribe(
       data => {
         if (data.timestamp > this.lastTimestamp) {

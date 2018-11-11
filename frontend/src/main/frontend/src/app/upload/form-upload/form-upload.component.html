@@ -5,10 +5,15 @@
 		[ngStyle]="{width:progress.percentage+'%'}">
 		{{progress.percentage}}%</div>
 </div>
-
+<input #box
+       (keyup.enter)="setKey(box.value)"
+       (blur)="setKey(box.value)">
 <label class="btn btn-default">
 	<input type="file" (change)="selectFile($event)">
 </label>
 
 <button class="btn btn-success"
 	(click)="upload()">Upload</button>
+
+
+Key : {{key}}
