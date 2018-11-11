@@ -1,5 +1,5 @@
 .container {
-  padding-top: 20px;
+  padding-top: 00px;
   max-width: 100%;
 }
 
@@ -8,9 +8,10 @@
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   font-weight: 700;
   line-height: 80px;
-  font-size: 100px;
+  font-size: 80px;
   text-align: center;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+  margin-top: 0px;
 }
 

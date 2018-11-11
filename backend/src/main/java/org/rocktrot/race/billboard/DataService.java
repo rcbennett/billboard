@@ -54,15 +54,19 @@ public class DataService {
     public void addResult(Result result) {
         // figure out the category
         CategoryResults catRes = catAgeMap.get(result.getAge());
-        List<Result> resultList;
+        List<Result> resultList = null;
         List<Result> leaderList;
         Result oldLeader = null;
 
         if (result.getGender().equalsIgnoreCase("M")) {
-            resultList = catRes.mensResults;
+            if (catRes != null) {
+                resultList = catRes.mensResults;
+            }
             leaderList = overallLeaders.mensResults;
         } else {
-            resultList = catRes.womensResults;
+            if (catRes != null) {
+                resultList = catRes.womensResults;
+            }
             leaderList = overallLeaders.womensResults;
         }
 
@@ -83,7 +87,7 @@ public class DataService {
                 log.info("Adding entry for [" + result.getName() + "] to overall leaders");
                 leaderList.add(result);
             }
-            if (!isLeader || oldLeader != null) {
+            if ((resultList != null) && (!isLeader || oldLeader != null)) {
                 if (!resultList.contains(result)) {
                     boolean canAdd = false;
                     if (resultList.size() >= 3) {

@@ -11,7 +11,7 @@
                 <div class="detail-list">
                   <div class="row"
                        *ngFor="let finisher of result.mensResults ; let f=first; let i = index">
-                    <div class="col-md-8 detail-item">{{i+1}} - {{finisher.name}}</div>
+                    <div class="col-md-8 detail-item">{{i+1}}. {{finisher.name}}</div>
                     <div class="col-md-4 detail-item time">{{finisher.timeString}}</div>
                   </div>
                 </div>
@@ -23,7 +23,7 @@
                   <div class="detail-list">
                     <div class="row"
                          *ngFor="let finisher of result.womensResults ; let f=first; let i = index">
-                      <div class="col-md-8 detail-item">{{i+1}} - {{finisher.name}}</div>
+                      <div class="col-md-8 detail-item">{{i+1}}. {{finisher.name}}</div>
                       <div class="col-md-4 detail-item time">{{finisher.timeString}}</div>
                     </div>
                   </div>
