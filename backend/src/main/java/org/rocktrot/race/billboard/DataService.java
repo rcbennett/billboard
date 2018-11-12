@@ -86,6 +86,13 @@ public class DataService {
                 isLeader = true;
                 log.info("Adding entry for [" + result.getName() + "] to overall leaders");
                 leaderList.add(result);
+
+            }
+            if(isLeader){
+                Collections.sort(leaderList);
+                while (leaderList.size() > 3) {
+                    leaderList.remove(3);
+                }
             }
             if ((resultList != null) && (!isLeader || oldLeader != null)) {
                 if (!resultList.contains(result)) {

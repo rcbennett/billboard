@@ -55,7 +55,9 @@
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
       text-align: left;
       font-size: 40px;
+      white-space: nowrap;
       overflow: hidden;
+      text-overflow: ellipsis;
     }
 
   .time {
